@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+    <header>
+        <h1> Welcome To My Netflix</h1>
+        <nav>
+            <a href="netflix.html" id="homeButton"><button>Home</button></a>
+            <a href="login.html" id="homeButton"><button>login</button></a>
+
+        </nav>
+        <div class="search">
+            <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="search for movies and tv shows..">
+        </div>
+    </header>
+
+    <main>
+        <section id="moviesSection">
+            <h2>Movies & Series</h2>
+            <div id="movieList" class="movie-container">
+                <img src="" alt="sabina">
+            </div>
+        </section>
+
+        <section id="detailsSection" style="display: none;">
+            <button onclick="backToHome()">Back</button>
+            <div id="movieDetails"></div>
+        </section>
+
+        <section id="playerSection" style="display: none;">
+            <button onclick="backToDetails()">Back</button>
+            <div id="videoPlayer">
+                <video controls autoplay width="600">
+                    <source src="" id="videoSource" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <script src="netflix.js"></script>
+</body>
+</html>
